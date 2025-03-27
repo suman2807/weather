@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1>Weather Forecast</h1>
+        <div class="search-box">
+            <div class="input-wrapper">
+                <i class="fas fa-search input-icon"></i>
+                <input type="text" id="cityInput" placeholder="Enter city name" aria-label="City name" list="citySuggestions">
+                <datalist id="citySuggestions"></datalist>
+            </div>
+            <button id="searchBtn" aria-label="Search weather">Get Weather</button>
+            <button id="geoBtn" title="Use current location" aria-label="Use current location">
+                <i class="fas fa-map-marker-alt"></i>
+            </button>
+        </div>
+        <div id="weatherResult" class="weather-card" aria-live="polite"></div>
+        <div id="forecastResult" class="forecast-card" aria-live="polite"></div>
+        <div id="loading" class="loading-spinner" aria-live="polite">
+            <span class="spinner"></span> Fetching weather...
+        </div>
+        <button id="toggleTheme" aria-label="Toggle theme" class="theme-toggle">
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
